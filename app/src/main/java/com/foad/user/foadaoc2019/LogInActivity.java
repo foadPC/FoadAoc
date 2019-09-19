@@ -33,12 +33,11 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         if(v == buttonLogIn) {
             if (editTextPassword.getText().toString().equals("")
                     || editTextEmail.getText().toString().equals("")) {
-                Toast.makeText(context this, text:"Empty Password Or Email", Toast.LENGTH_LONG).
-                show();
+                Toast.makeText( this, "Empty Password Or Email", Toast.LENGTH_LONG).show();
             } else {
                 Intent i = new Intent(this, MainActivity.class);
-                i.putExtra(name:"email", editTextEmail.getText().toString());
-                i.putExtra(name:"password", editTextPassword.getText().toString());
+                i.putExtra("email", editTextEmail.getText().toString());
+                i.putExtra("password", editTextPassword.getText().toString());
                 startActivity(i);
             }
         }else {
@@ -52,4 +51,3 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
 
     }
-}
