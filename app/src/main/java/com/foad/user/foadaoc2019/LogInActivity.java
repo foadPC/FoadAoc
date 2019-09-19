@@ -43,7 +43,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
             }
         }else {
             Intent i = new Intent(this, SignUpActivity.class);
-            startActivity(i)
+            startActivity(i);
         }
 
             Intent i = new Intent(this, MainActivity.class);
