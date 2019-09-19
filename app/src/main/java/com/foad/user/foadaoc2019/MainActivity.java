@@ -9,5 +9,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String password = getIntent().getStringExtra(name:"password");
+
+        String email = getIntent().getStringExtra(name:"email");
+
+        tvEmail = findViewById(R.id.tvEmail);
+        tvP
+
     }
 }

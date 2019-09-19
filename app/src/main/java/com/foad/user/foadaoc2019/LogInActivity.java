@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
     //    //1. properties definition (הצהרה)
@@ -29,10 +30,26 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        if(v == buttonLogIn){
+        if(v == buttonLogIn) {
+            if (editTextPassword.getText().toString().equals("")
+                    || editTextEmail.getText().toString().equals("")) {
+                Toast.makeText(context this, text:"Empty Password Or Email", Toast.LENGTH_LONG).
+                show();
+            } else {
+                Intent i = new Intent(this, MainActivity.class);
+                i.putExtra(name:"email", editTextEmail.getText().toString());
+                i.putExtra(name:"password", editTextPassword.getText().toString());
+                startActivity(i);
+            }
+        }else {
+            Intent i = new Intent(this, SignUpActivity.class);
+            startActivity(i)
+        }
+
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
         }
+
 
     }
 }
