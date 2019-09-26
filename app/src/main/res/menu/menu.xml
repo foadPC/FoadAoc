@@ -8,10 +8,5 @@
     <item
         android:id="@+id/logout"
         android:title="Logout" />
-    public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
-     case R.id.setting
-    }
 
-    }
 </menu>
