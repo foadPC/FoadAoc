@@ -14,12 +14,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:background="#006699"
         android:gravity="center"
         android:shadowColor="?android:attr/colorActivatedHighlight"
         android:text="User"
         android:textColor="#ffffff"
         android:textColorHint="?android:attr/textColorLinkInverse"
-        android: android:background="#006699"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button3"
@@ -29,5 +30,6 @@
         android:layout_weight="1"
         android:shadowColor="#006699"
         android:text="Manager"
-        android:textColor="#006699" />
+        android:textColor="#006699"
+        android:textStyle="bold" />
 </LinearLayout>

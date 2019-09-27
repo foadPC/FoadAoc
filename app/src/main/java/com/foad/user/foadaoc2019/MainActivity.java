@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
         String email = getIntent().getStringExtra("email");
 
-        tvEmail = findViewById(R.id.tvEmail);
-        tvPassword = findViewById(R.id.tvPassword);
+        tvEmail = findViewById(R.id.editTextEmail);
+        tvPassword = findViewById(R.id.editTextPassword);
 
         tvEmail.setText(email);
         tvPassword.setText(password);
