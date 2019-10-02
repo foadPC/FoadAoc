@@ -12,6 +12,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     //    //1. properties definition (הצהרה)
     EditText editTextEmail, editTextPassword;
     Button buttonLogIn, buttonSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,24 +31,18 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        if(v == buttonLogIn) {
+        if (v == buttonLogIn) {
             if (editTextPassword.getText().toString().equals("")
                     || editTextEmail.getText().toString().equals("")) {
-                Toast.makeText( this, "Empty Password Or Email", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Empty Password Or Email", Toast.LENGTH_LONG).show();
             } else {
-                Intent i = new Intent(this, MainActivity.class);
+                Intent i = new Intent(this, ManagerOrUser.class);
                 i.putExtra("email", editTextEmail.getText().toString());
                 i.putExtra("password", editTextPassword.getText().toString());
                 startActivity(i);
             }
-        }else {
-            Intent i = new Intent(this, SignUpActivity.class);
-            startActivity(i);
-        }
-
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
         }
 
 
     }
+}

@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="15dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -79,7 +80,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="15dp"
                 android:layout_weight="1"
-                android:text="Email Adress" />
+                android:text="Email" />
 
             <EditText
                 android:id="@+id/editText3"
@@ -114,7 +115,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="password"
-                android:inputType="textPersonName" />
+                android:inputType="textPassword" />
         </LinearLayout>
 
         <LinearLayout
@@ -145,5 +146,11 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 </LinearLayout>
