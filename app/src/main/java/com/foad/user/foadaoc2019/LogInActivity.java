@@ -42,7 +42,10 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(i);
             }
         }
-
+            if (v == buttonSignUp) {
+                Intent i = new Intent(this, SignUpActivity.class);
+                startActivity(i);
+            }
+        }
 
     }
-}
