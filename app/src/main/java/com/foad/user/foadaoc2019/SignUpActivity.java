@@ -34,15 +34,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         if(v==confirm){
             if (editTextFirstName.getText().toString().equals("")
                     || editTextLastName.getText().toString().equals("")
-                     || editTextEmailSign.getText().toString().equals("")
-                      || editTextPasswordSign.getText().toString().equals("")
-                       || editTextConfirmPassword.getText().toString().equals(""))
+                    || editTextEmailSign.getText().toString().equals("")
+                    || editTextPasswordSign.getText().toString().equals("")
+                    || editTextConfirmPassword.getText().toString().equals(""))
             {
                 Toast.makeText(this, "A Field Is Empty", Toast.LENGTH_LONG).show();
             }
-           if((!editTextConfirmPassword.getText().toString().equals(editTextPasswordSign))){
-               Toast.makeText(this, "Passwords Dont Match", Toast.LENGTH_LONG).show();
-           }
+            else if((!editTextConfirmPassword.getText().toString().equals(editTextPasswordSign))){
+                Toast.makeText(this, "Passwords Don't Match", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
