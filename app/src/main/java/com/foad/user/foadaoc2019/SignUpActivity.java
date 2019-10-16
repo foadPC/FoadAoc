@@ -41,7 +41,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this, "A Field Is Empty", Toast.LENGTH_LONG).show();
             }
             else if((!editTextConfirmPassword.getText().toString().equals(editTextPasswordSign))){
-                Toast.makeText(this, "Passwords Don't Match", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Passwords Don't Match", Toast.LENGTH_LONG).show();0
             }
         }
     }

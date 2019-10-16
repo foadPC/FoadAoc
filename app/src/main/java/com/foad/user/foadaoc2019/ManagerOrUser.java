@@ -23,7 +23,7 @@ public class ManagerOrUser extends AppCompatActivity {
             startActivity(new Intent(this, ManagerOrUser.class));
             return true;
         case R.id.logout:
-            startActivity(new Intent(this, ManagerOrUser.class));
+            startActivity(new Intent(this, MainActivity.class));
             return true;
         default:
             return super.onOptionsItemSelected(item);
