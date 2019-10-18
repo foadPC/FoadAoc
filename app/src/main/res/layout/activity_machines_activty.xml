@@ -32,4 +32,9 @@
         android:text="מכשירי הרדמה"
         android:textColor="#006699"
         android:textStyle="bold" />
+
 </LinearLayout>
+
+
+
+

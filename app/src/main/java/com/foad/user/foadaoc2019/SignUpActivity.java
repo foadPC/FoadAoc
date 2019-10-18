@@ -40,15 +40,16 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             {
                 Toast.makeText(this, "A Field Is Empty", Toast.LENGTH_LONG).show();
             }
-            else if((!editTextConfirmPassword.getText().toString().equals(editTextPasswordSign))){
+            else if((!editTextConfirmPassword.getText().toString().equals(editTextPasswordSign.getText().toString()))){
                 Toast.makeText(this, "Passwords Don't Match", Toast.LENGTH_LONG).show();
             }
+            else {
+                Intent i = new Intent(this, LogInActivity.class);
+                startActivity(i);
+            }
         }
-        if (v == confirm) {
-            Intent i = new Intent(this, LogInActivity.class);
-            startActivity(i);
-        }
-    }
 
+
+    }
 
 }

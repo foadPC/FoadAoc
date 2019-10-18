@@ -8,6 +8,6 @@ public class MachinesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_machines);
+        setContentView(R.layout.activity_machines_activty);
     }
 }
