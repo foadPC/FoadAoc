@@ -1,4 +1,4 @@
-package com.foad.user.foadaoc2019;
+ package com.foad.user.foadaoc2019;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -41,8 +41,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this, "A Field Is Empty", Toast.LENGTH_LONG).show();
             }
             else if((!editTextConfirmPassword.getText().toString().equals(editTextPasswordSign))){
-                Toast.makeText(this, "Passwords Don't Match", Toast.LENGTH_LONG).show();0
+                Toast.makeText(this, "Passwords Don't Match", Toast.LENGTH_LONG).show();
             }
+        }
+        if (v == confirm) {
+            Intent i = new Intent(this, LogInActivity.class);
+            startActivity(i);
         }
     }
 

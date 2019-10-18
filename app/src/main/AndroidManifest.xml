@@ -21,7 +21,7 @@
         <activity android:name=".ManagerOrUser" />
         <activity android:name=".CameraActivity" />
         <activity android:name=".MachinesActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
     </application>
 
 </manifest>
