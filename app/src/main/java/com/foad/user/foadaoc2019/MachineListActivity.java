@@ -14,7 +14,7 @@ public class MachineListActivity extends AppCompatActivity {
     ListView machineList;
     Button addMachineButton;
     ArrayList<Machine> machines = new ArrayList<>();
-    ArrayAdapter<String> adapter;
+    CustomAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MachineListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_machine_list);
 
         machineList = findViewById(R.id.machineList);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, machines);
+        adapter = new CustomAdapter(this, R.layout.machine_item, machines);
 
         machines.add(new Machine("machine 1",new Date(), new Date(), new Date()) );
         machines.add(new Machine("machine 2",new Date(), new Date(), new Date()) );

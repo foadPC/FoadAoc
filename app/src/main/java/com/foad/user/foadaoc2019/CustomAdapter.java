@@ -31,18 +31,11 @@ public class CustomAdapter extends ArrayAdapter<Machine> {
         Machine p = getItem(position);
 
         if (p != null) {
-            TextView tvName = (TextView) v.findViewById(R.id.);
-            tvName.setText(p.getIngredient());
 
-            CheckBox checkBox = v.findViewById(R.id.checkBox);
-            checkBox.setChecked(p.isCheckbox());
 
         }
 
         return v;
     }
-
-}
-
 
 }
