@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "FIREBASE";
     //    //1. properties definition (הצהרה)
     EditText editTextEmail, editTextPassword;
     Button buttonLogIn, buttonSignUp;
@@ -37,7 +39,6 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         buttonLogIn.setOnClickListener(this);
 
 
-
         buttonSignUp = findViewById(R.id.buttonSignUp);
         buttonSignUp.setOnClickListener(this);
 
@@ -50,10 +51,8 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
                     || editTextEmail.getText().toString().equals("")) {
                 Toast.makeText(this, "Empty Password Or Email", Toast.LENGTH_LONG).show();
             } else {
-                Intent i = new Intent(this, ManagerOrUser.class);
-                i.putExtra("email", editTextEmail.getText().toString());
-                i.putExtra("password", editTextPassword.getText().toString());
-                startActivity(i);
+                logIn(editTextEmail.getText().toString(), editTextPassword.getText().toString() );
+
             }
         }
         if (v == buttonSignUp) {
@@ -61,42 +60,28 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
             startActivity(i);
         }
     }
-    public void logIn(String email, String password){
+
+    public void logIn(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
-                            Intent i = new Intent()
-                           // FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            Intent i = new Intent(LogInActivity.this, ManagerOrUser.class);
+                            startActivity(i);
+                            // FirebaseUser user = mAuth.getCurrentUser();
+                            //  updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
+                            Toast.makeText(LogInActivity.this, "Wrong Email Or Password.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
-                        }
+                            //updateUI(null);
                         }
                     }
-                })
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            // Name, email address, and profile photo Url
-            String name = user.getDisplayName();
-            String email = user.getEmail();
-           3 Uri photoUrl = user.getPhotoUrl();
-
-            // Check if user's email is verified
-            boolean emailVerified = user.isEmailVerified();
-
-            // The user's ID, unique to the Firebase project. Do NOT use this value to
-            // authenticate with your backend server, if you have one. Use
-            // FirebaseUser.getToken() instead.
-            String uid = user.getUid();
-        }
+                });
     }
 
 }
