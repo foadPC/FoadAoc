@@ -1,5 +1,6 @@
 package com.foad.user.foadaoc2019;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +38,9 @@ public class MachineListActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        make an intent lsf7t details 3n lmachines :)
+        if (v == addMachineButton) {
+            Intent i = new Intent(this, machineDetails.class);
+            startActivity(i);
+        }
     }
 }

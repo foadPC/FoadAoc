@@ -24,9 +24,9 @@
         <activity android:name=".MachinesActivity" />
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home"/>
-        <activity android:name=".MachineListActivity"></activity>
+            android:label="@string/title_activity_home" />
+        <activity android:name=".MachineListActivity" />
+        <activity android:name=".machineDetails"></activity>
     </application>
 
-    
 </manifest>

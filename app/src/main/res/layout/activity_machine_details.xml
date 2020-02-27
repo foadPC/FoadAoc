@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".machineDetails">
+
+    <TextView
+        android:id="@+id/MachineType"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/LastMaintenance"
+        android:layout_marginTop="139dp"
+        android:text="MachineType :" />
+
+    <TextView
+        android:id="@+id/DateOfCreation"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/MachineType"
+        android:layout_marginStart="44dp"
+        android:text="Date Of Creation :" />
+
+    <TextView
+        android:id="@+id/LastMaintenance"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:layout_alignStart="@+id/DateOfCreation"
+        android:layout_below="@+id/DateOfCreation"
+        android:text="Last Maintenance :" />
+
+    <TextView
+        android:id="@+id/NextMaintenance"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:layout_alignStart="@+id/DateOfCreation"
+        android:layout_below="@+id/LastMaintenance"
+        android:text="Next Maintenance :" />
+
+    <EditText
+        android:id="@+id/InsertMachineType"
+        android:layout_width="181dp"
+        android:layout_height="33dp"
+        android:layout_alignTop="@+id/MachineType"
+        android:layout_toEndOf="@+id/MachineType"
+        android:hint="Insert Machine Type"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/InsertDateOfCreation"
+        android:layout_width="181dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/MachineType"
+        android:layout_toEndOf="@+id/MachineType"
+        android:hint="InsertDateOfCreation"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/InsertLastMaintenance"
+        android:layout_width="181dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/DateOfCreation"
+        android:layout_toEndOf="@+id/MachineType"
+        android:hint="Insert Last Maintenance"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/MachineStatus"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:layout_alignStart="@+id/DateOfCreation"
+        android:layout_below="@+id/NextMaintenance"
+        android:text="Machine Status :" />
+
+    <Button
+        android:id="@+id/CreateMachine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="112dp"
+        android:layout_marginStart="122dp"
+        android:text="Create Machine" />
+
+    <EditText
+        android:id="@+id/InsertNextMaintenance"
+        android:layout_width="181dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/LastMaintenance"
+        android:layout_toEndOf="@+id/MachineType"
+        android:ems="10"
+        android:hint="Insert Next Maintenance"
+        android:inputType="textPersonName"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/InsertMachineStatus"
+        android:layout_width="181dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/NextMaintenance"
+        android:layout_toEndOf="@+id/MachineType"
+        android:ems="10"
+        android:hint="Insert Machine Status"
+        android:inputType="textPersonName"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,23 +1,27 @@
 package com.foad.user.foadaoc2019;
 
+import android.widget.Button;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class Machine implements Serializable {
-private String MachineName;
-private Date date;
+private String MachineType;
+private Date DateOfCreation;
 private Date LastMaintenance;
 private Date NextMaintenance;
-
+private String MachineStatus;
+private Button CreateMachine;
     public Machine() {
 
     }
 
-    public Machine(String machineName, Date date, Date lastMaintenance, Date nextMaintenance) {
-        this.MachineName = machineName;
-        this.date = date;
+    public Machine(String machineType, Date DateOfCreation, Date lastMaintenance, Date nextMaintenance, String MachineStatus) {
+        this.MachineType = machineType;
+        this.DateOfCreation = DateOfCreation;
         this.LastMaintenance = lastMaintenance;
         this.NextMaintenance = nextMaintenance;
+        this.MachineStatus = MachineStatus;
     }
 
     public Date getNextMaintenance() {
@@ -37,31 +41,49 @@ private Date NextMaintenance;
         LastMaintenance = lastMaintenance;
     }
 
-    public Date getDate() {
-
-        return date;
+    public Date getDateOfCreation() {
+        return DateOfCreation;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateOfCreation(Date dateOfCreation) {
+        DateOfCreation = dateOfCreation;
     }
 
     public String getMachineName() {
 
-        return MachineName;
+        return MachineType;
     }
 
-    public void setMachineName(String machineName) {
-        MachineName = machineName;
+    public void setMachineType(String machineType) {
+        MachineType = machineType;
     }
+
+    public String getMachineStatus() {
+        return MachineStatus;
+    }
+
+    public void setMachineStatus(String machineStatus) {
+        MachineStatus = machineStatus;
+    }
+
+    public Button getCreateMachine() {
+        return CreateMachine;
+    }
+
+    public void setCreateMachine(Button createMachine) {
+        CreateMachine = createMachine;
+    }
+
+
 
     @Override
     public String toString() {
         return "Machine{" +
-                "MachineName='" + MachineName + '\'' +
-                ", date=" + date +
+                "MachineType='" + MachineType + '\'' +
+                ", date=" + DateOfCreation +
                 ", LastMaintenance=" + LastMaintenance +
                 ", NextMaintenance=" + NextMaintenance +
+                ", MachineStatus=" + MachineStatus +
                 '}';
     }
 }
