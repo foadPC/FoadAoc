@@ -25,9 +25,7 @@ public class MachineListActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_machine_list);
 
         machineList = findViewById(R.id.machineList);
-        machines.add(new Machine("machine 1",new Date(), new Date(), new Date()) );
-        machines.add(new Machine("machine 2",new Date(), new Date(), new Date()) );
-        machines.add(new Machine("machine 3",new Date(), new Date(), new Date()) );
+
         adapter = new CustomAdapter(this, R.layout.machine_item, machines);
         machineList.setAdapter(adapter);
 

@@ -70,4 +70,22 @@
         android:layout_toEndOf="@+id/textView20"
         android:hint="Insert Date" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="100dp"
+        android:text="Machine Status :" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-100dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:hint="Status" />
+
 </RelativeLayout>

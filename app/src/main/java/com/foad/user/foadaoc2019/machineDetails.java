@@ -38,13 +38,14 @@ EditText InsertMachineType, InsertDateOfCreation,InsertLastMaintenance,InsertNex
     }
     public void onClick(View v){
         if (v == CreateMachine){
-            //continue all properties to firebase
-            addToFireBase(new Machine(MachineType.getText().toString(), );
+            addToFireBase(new Machine(MachineType.getText().toString(),DateOfCreation.getText().toString(),LastMaintenance.getText().toString(),NextMaintenance.getText().toString(),MachineStatus.getText().toString()) );
             Intent i = new Intent(this, MachineListActivity.class);
             startActivity(i);
         }
     }
     public void addToFireBase(Machine machine){
+
+
 
     }
 }

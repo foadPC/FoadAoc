@@ -7,16 +7,17 @@ import java.util.Date;
 
 public class Machine implements Serializable {
 private String MachineType;
-private Date DateOfCreation;
-private Date LastMaintenance;
-private Date NextMaintenance;
+private String DateOfCreation;
+private String LastMaintenance;
+private String NextMaintenance;
 private String MachineStatus;
 private Button CreateMachine;
+
     public Machine() {
 
     }
 
-    public Machine(String machineType, Date DateOfCreation, Date lastMaintenance, Date nextMaintenance, String MachineStatus) {
+    public Machine(String machineType, String DateOfCreation, String lastMaintenance, String nextMaintenance, String MachineStatus) {
         this.MachineType = machineType;
         this.DateOfCreation = DateOfCreation;
         this.LastMaintenance = lastMaintenance;
@@ -24,28 +25,28 @@ private Button CreateMachine;
         this.MachineStatus = MachineStatus;
     }
 
-    public Date getNextMaintenance() {
+    public String getNextMaintenance() {
         return NextMaintenance;
     }
 
-    public void setNextMaintenance(Date nextMaintenance) {
+    public void setNextMaintenance(String nextMaintenance) {
         NextMaintenance = nextMaintenance;
     }
 
-    public Date getLastMaintenance() {
+    public String getLastMaintenance() {
 
         return LastMaintenance;
     }
 
-    public void setLastMaintenance(Date lastMaintenance) {
+    public void setLastMaintenance(String lastMaintenance) {
         LastMaintenance = lastMaintenance;
     }
 
-    public Date getDateOfCreation() {
+    public String getDateOfCreation() {
         return DateOfCreation;
     }
 
-    public void setDateOfCreation(Date dateOfCreation) {
+    public void setDateOfCreation(String dateOfCreation) {
         DateOfCreation = dateOfCreation;
     }
 
