@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class machineDetails extends AppCompatActivity implements View.OnClickListener{
 Button CreateMachine;
 TextView MachineType,DateOfCreation,LastMaintenance,NextMaintenance,MachineStatus;
@@ -38,13 +41,18 @@ EditText InsertMachineType, InsertDateOfCreation,InsertLastMaintenance,InsertNex
     }
     public void onClick(View v){
         if (v == CreateMachine){
-            addToFireBase(new Machine(MachineType.getText().toString(),DateOfCreation.getText().toString(),LastMaintenance.getText().toString(),NextMaintenance.getText().toString(),MachineStatus.getText().toString()) );
+            addToFireBase(new Machine(InsertMachineType.getText().toString(),InsertDateOfCreation.getText().toString(),InsertLastMaintenance.getText().toString(),NextMaintenance.getText().toString(),InsertMachineStatus.getText().toString() ));
             Intent i = new Intent(this, MachineListActivity.class);
             startActivity(i);
         }
     }
     public void addToFireBase(Machine machine){
 
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Machines");
+// public Machine(String machineType, String DateOfCreation, String lastMaintenance, String nextMaintenance, String MachineStatus) {
+        myRef.push().setValue(machine);
 
 
     }
