@@ -39,6 +39,8 @@ import com.google.firebase.auth.FirebaseUser;
         confirm.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
+
+
     }
      @Override
      public void onStart() {
@@ -93,6 +95,9 @@ import com.google.firebase.auth.FirebaseUser;
         }
 
 
+
     }
+
+
 
 }

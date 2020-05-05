@@ -56,6 +56,8 @@ private Button CreateMachine;
         return MachineType;
     }
 
+
+
     public void setMachineType(String machineType) {
         MachineType = machineType;
     }
@@ -77,15 +79,15 @@ private Button CreateMachine;
     }
 
 
-
     @Override
     public String toString() {
         return "Machine{" +
                 "MachineType='" + MachineType + '\'' +
-                ", date=" + DateOfCreation +
-                ", LastMaintenance=" + LastMaintenance +
-                ", NextMaintenance=" + NextMaintenance +
-                ", MachineStatus=" + MachineStatus +
+                ", DateOfCreation='" + DateOfCreation + '\'' +
+                ", LastMaintenance='" + LastMaintenance + '\'' +
+                ", NextMaintenance='" + NextMaintenance + '\'' +
+                ", MachineStatus='" + MachineStatus + '\'' +
+                ", CreateMachine=" + CreateMachine +
                 '}';
     }
 }

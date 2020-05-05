@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "349065097509",
+    "firebase_url": "https://foadaoc2019.firebaseio.com",
+    "project_id": "foadaoc2019",
+    "storage_bucket": "foadaoc2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349065097509:android:87316b783dfb827f532acc",
+        "android_client_info": {
+          "package_name": "com.foad.user.foadaoc2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349065097509-vdbg1tf7mv5s2m5slkvg2d5e04lr4rac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foad.user.foadaoc2019",
+            "certificate_hash": "090b37ae54543232e42d4a8a51221c2a9a993f6a"
+          }
+        },
+        {
+          "client_id": "349065097509-cio9t41pm8vuv15jcld425v5pc0ltisd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe-K80hp22P1ksjvz4PWMCR9f1E_HTrYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349065097509-cio9t41pm8vuv15jcld425v5pc0ltisd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -93,6 +93,8 @@
         android:layout_width="136dp"
         android:layout_height="18dp"
         android:layout_below="@+id/textView20"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/textView3"
         android:ems="10"
         android:inputType="textPersonName"

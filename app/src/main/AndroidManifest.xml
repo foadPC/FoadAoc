@@ -19,12 +19,7 @@
         <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".ManagerOrUser" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".SettingsActivity" />
         <activity android:name=".MachinesActivity" />
-        <activity
-            android:name=".HomeActivity"
-            android:label="@string/title_activity_home" />
         <activity android:name=".MachineListActivity" />
         <activity android:name=".machineDetails"></activity>
     </application>

@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="100dp"
-    android:orientation="vertical"
-    tools:context=".MachinesActivity">
-
+    android:orientation="vertical">
     <Button
         android:id="@+id/respButton"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:background="#006699"
-        android:gravity="center"
-        android:shadowColor="?android:attr/colorActivatedHighlight"
-        android:text="מכשירי הנשמה"
-        android:textColor="#ffffff"
-        android:textColorHint="?android:attr/textColorLinkInverse"
-        android:textStyle="bold" />
+        android:layout_width="246dp"
+        android:layout_height="202dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="80dp"
+
+        android:text="מכשירי הנשמה" />
 
     <Button
         android:id="@+id/sleepButton"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:shadowColor="#006699"
-        android:text="מכשירי הרדמה"
-        android:textColor="#006699"
-        android:textStyle="bold" />
+        android:layout_width="246dp"
+        android:layout_height="202dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="310dp"
 
-</LinearLayout>
+        android:text="מכשירי הרדמה" />
+
+</RelativeLayout>
 
 
 

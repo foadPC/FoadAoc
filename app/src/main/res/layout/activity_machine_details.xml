@@ -89,11 +89,11 @@
         android:id="@+id/InsertNextMaintenance"
         android:layout_width="181dp"
         android:layout_height="33dp"
-        android:layout_below="@+id/LastMaintenance"
-        android:layout_toEndOf="@+id/MachineType"
-        android:ems="10"
-        android:hint="Insert Next Maintenance"
-        android:inputType="textPersonName"
+        android:layout_alignTop="@+id/InsertLastMaintenance"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="33dp"
+        android:layout_toEndOf="@+id/NextMaintenance"
+        android:hint="InsertNextMaintenance"
         android:textSize="10sp" />
 
     <EditText
@@ -104,7 +104,6 @@
         android:layout_toEndOf="@+id/MachineType"
         android:ems="10"
         android:hint="Insert Machine Status"
-        android:inputType="textPersonName"
         android:textSize="10sp" />
 
 </RelativeLayout>
