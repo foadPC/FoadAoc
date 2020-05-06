@@ -21,7 +21,7 @@
         <activity android:name=".ManagerOrUser" />
         <activity android:name=".MachinesActivity" />
         <activity android:name=".MachineListActivity" />
-        <activity android:name=".machineDetails"></activity>
+        <activity android:name=".machineDetails" />
     </application>
 
 </manifest>

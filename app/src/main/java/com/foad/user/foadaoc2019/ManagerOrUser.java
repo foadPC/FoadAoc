@@ -1,5 +1,6 @@
 package com.foad.user.foadaoc2019;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -24,8 +25,6 @@ public class ManagerOrUser extends AppCompatActivity implements View.OnClickList
 
         UserButton = findViewById(R.id.UserButton);
         UserButton.setOnClickListener(this);
-
-
 
     }
 
@@ -64,6 +63,7 @@ public class ManagerOrUser extends AppCompatActivity implements View.OnClickList
 
     public void onClick(View v) {
         if (v == ManagerButton) {
+
             Intent i = new Intent(this, MachinesActivity.class);
             startActivity(i);
         }
