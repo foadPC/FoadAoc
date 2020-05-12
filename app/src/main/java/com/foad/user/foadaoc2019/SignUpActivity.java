@@ -1,6 +1,7 @@
  package com.foad.user.foadaoc2019;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,7 +41,21 @@ import com.google.firebase.auth.FirebaseUser;
 
         mAuth = FirebaseAuth.getInstance();
 
+        final LoadingDialog loadingDialog = new LoadingDialog(SignUpActivity.this);
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadingDialog.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable(){
+                    @Override
+                    public void run() {
+                        loadingDialog.dismissDialog();
+                    }
+                },1000);
 
+            }
+        });
     }
      @Override
      public void onStart() {

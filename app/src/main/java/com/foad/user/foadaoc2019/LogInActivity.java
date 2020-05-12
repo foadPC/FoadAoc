@@ -2,6 +2,7 @@ package com.foad.user.foadaoc2019;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,12 +43,12 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         buttonSignUp = findViewById(R.id.buttonSignUp);
         buttonSignUp.setOnClickListener(this);
 
-
     }
 
     @Override
     public void onClick(View v) {
         if (v == buttonLogIn) {
+
             if (editTextPassword.getText().toString().equals("")
                     || editTextEmail.getText().toString().equals("")) {
                 Toast.makeText(this, "Empty Password Or Email", Toast.LENGTH_LONG).show();

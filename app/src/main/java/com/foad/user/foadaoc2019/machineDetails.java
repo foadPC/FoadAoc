@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class machineDetails extends AppCompatActivity implements View.OnClickListener{
-Button CreateMachine;
+Button CreateMachine,Camera;
 TextView MachineType,DateOfCreation,LastMaintenance,NextMaintenance,MachineStatus;
 EditText InsertMachineType, InsertDateOfCreation,InsertLastMaintenance,InsertNextMaintenance,InsertMachineStatus;
     @Override
@@ -55,6 +55,9 @@ EditText InsertMachineType, InsertDateOfCreation,InsertLastMaintenance,InsertNex
         CreateMachine = findViewById(R.id.CreateMachine);
         CreateMachine.setOnClickListener(this);
 
+        Camera = findViewById(R.id.Camera);
+        Camera.setOnClickListener(this);
+
         //textView
         MachineType = findViewById(R.id.MachineType);
         DateOfCreation = findViewById(R.id.DateOfCreation);
@@ -74,6 +77,10 @@ EditText InsertMachineType, InsertDateOfCreation,InsertLastMaintenance,InsertNex
         if (v == CreateMachine){
             addToFireBase(new Machine(InsertMachineType.getText().toString(),InsertDateOfCreation.getText().toString(),InsertLastMaintenance.getText().toString(),NextMaintenance.getText().toString(),InsertMachineStatus.getText().toString() ));
             Intent i = new Intent(this, MachineListActivity.class);
+            startActivity(i);
+        }
+        if(v == Camera){
+            Intent i = new Intent(this,CameraTestActivity.class);
             startActivity(i);
         }
     }
