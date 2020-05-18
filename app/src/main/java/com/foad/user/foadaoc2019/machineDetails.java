@@ -80,7 +80,7 @@ EditText InsertMachineType, InsertDateOfCreation,InsertLastMaintenance,InsertNex
             startActivity(i);
         }
         if(v == Camera){
-            Intent i = new Intent(this,CameraTestActivity.class);
+            Intent i = new Intent(this, CameraActivity.class);
             startActivity(i);
         }
     }

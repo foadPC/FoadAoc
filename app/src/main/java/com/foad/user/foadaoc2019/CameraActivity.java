@@ -23,7 +23,7 @@ import java.util.Date;
 
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
-public class CameraTestActivity extends AppCompatActivity {
+public class CameraActivity extends AppCompatActivity {
     Button btnCaptureImage;
     ImageView imageView;
     String pathToFile;
@@ -60,7 +60,7 @@ public class CameraTestActivity extends AppCompatActivity {
                 photoFile = createPhotoFile();
               if(photoFile!=null) {
                   pathToFile = photoFile.getAbsolutePath();
-                  Uri photoURI = FileProvider.getUriForFile(CameraTestActivity.this, "com.thecodecity.cameraandroid.fileprovider",photoFile);
+                  Uri photoURI = FileProvider.getUriForFile(CameraActivity.this, "com.thecodecity.cameraandroid.fileprovider",photoFile);
                   takePic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                   startActivityForResult(takePic, 1);
               }

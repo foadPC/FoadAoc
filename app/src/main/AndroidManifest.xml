@@ -24,7 +24,7 @@
         <activity android:name=".MachinesActivity" />
         <activity android:name=".MachineListActivity" />
         <activity android:name=".machineDetails" />
-        <activity android:name=".CameraTestActivity"/>
+        <activity android:name=".CameraActivity"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
